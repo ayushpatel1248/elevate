@@ -40,10 +40,10 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 relative z-10 group">
-          <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-slate-900 to-slate-700 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-            <span className="text-white font-outfit font-bold text-xl leading-none">E</span>
+          <div className="w-9 h-9 rounded-[10px] bg-[#1a2130] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <span className="text-white font-outfit font-extrabold text-2xl leading-none">E</span>
           </div>
-          <span className="font-outfit font-bold text-xl tracking-wide text-slate-900">Elevate<span className="text-amber-500">.</span></span>
+          <span className="font-outfit font-extrabold text-3xl tracking-tight text-[#1a2130]">Elevate<span className="text-amber-400">.</span></span>
         </Link>
 
         {/* Desktop Nav */}

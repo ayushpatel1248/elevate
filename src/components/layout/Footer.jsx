@@ -13,10 +13,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1 border-r border-slate-800/50 pr-8">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center transform group-hover:-rotate-12 transition-transform duration-300">
-                <span className="text-white font-outfit font-bold text-xl leading-none">E</span>
+              <div className="w-9 h-9 rounded-[10px] bg-[#1a2130] border border-slate-700 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <span className="text-white font-outfit font-extrabold text-2xl leading-none">E</span>
               </div>
-              <span className="font-outfit font-bold text-xl tracking-wide text-white">Elevate<span className="text-amber-500">.</span></span>
+              <span className="font-outfit font-extrabold text-3xl tracking-tight text-white">Elevate<span className="text-amber-400">.</span></span>
             </Link>
             <p className="text-sm leading-relaxed mb-8 max-w-xs">
               Trusted legal expertise and fast, reliable property documentation services in Bangalore.
