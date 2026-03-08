@@ -23,7 +23,7 @@ export default function AdminPortal() {
     }
     
     try {
-      const response = await fetch('http://localhost:5001/api/requests', {
+      const response = await fetch('https://elevatebackend-hr4n.onrender.com/api/requests', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -67,7 +67,7 @@ export default function AdminPortal() {
     setLoginError('');
     
     try {
-      const response = await fetch('http://localhost:5001/api/admin/login', {
+      const response = await fetch('https://elevatebackend-hr4n.onrender.com/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })

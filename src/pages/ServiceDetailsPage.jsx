@@ -218,7 +218,7 @@ export default function ServiceDetailsPage() {
     setSubmitStatus(null);
     
     try {
-      const response = await fetch('http://localhost:5001/api/requests', {
+      const response = await fetch('https://elevatebackend-hr4n.onrender.com/api/requests', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
