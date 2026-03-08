@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-[10px] bg-[#1a2130] border border-slate-700 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <span className="text-white font-outfit font-extrabold text-2xl leading-none">E</span>
               </div>
-              <span className="font-outfit font-extrabold text-3xl tracking-tight text-white">Elevate<span className="text-amber-400">.</span></span>
+              <span className="font-outfit font-extrabold text-3xl tracking-tight text-white">Extix<span className="text-amber-400">.</span></span>
             </Link>
             <p className="text-sm leading-relaxed mb-8 max-w-xs">
               Trusted legal expertise and fast, reliable property documentation services in Bangalore.
