@@ -30,12 +30,18 @@ export default function Hero() {
   // Scroll Parallax Effects
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end center"],
   });
 
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scaleText = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+  const rotateXText = useTransform(scrollYProgress, [0, 0.5], [0, 20]);
+  
+  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.8]);
+  const rotateImage = useTransform(scrollYProgress, [0, 1], [5, -15]);
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacityImage = useTransform(scrollYProgress, [0, 0.8, 1], [1, 0.5, 0]);
 
   // Smooth mouse movement for floating cards
   const springConfig = { damping: 20, stiffness: 100, mass: 0.5 };
@@ -76,11 +82,16 @@ export default function Hero() {
           
           {/* Text Content */}
           <motion.div 
-            className="lg:col-span-6 xl:col-span-5 pt-10 lg:pt-0 z-20"
+            className="lg:col-span-6 xl:col-span-5 pt-10 lg:pt-0 z-20 origin-left"
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            style={{ opacity: opacityText }}
+            style={{ 
+              opacity: opacityText,
+              scale: scaleText,
+              rotateX: rotateXText,
+              y: useTransform(scrollYProgress, [0, 1], ["0%", "-40%"])
+            }}
           >
             <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-slate-200/50 mb-8 shadow-sm">
               <span className="relative flex h-3 w-3">
@@ -138,11 +149,16 @@ export default function Hero() {
           <div className="lg:col-span-6 xl:col-span-7 relative h-[400px] lg:h-[700px] w-full flex justify-center items-center mt-8 lg:mt-0">
             {/* Main Image Mask with Parallax */}
             <motion.div 
-              className="absolute right-0 lg:right-0 top-1/2 -translate-y-1/2 w-full max-w-[450px] lg:max-w-[600px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-900/20"
-              initial={{ scale: 0.8, opacity: 0, rotate: 5 }}
-              animate={{ scale: 1, opacity: 1, rotate: 0 }}
-              transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-              style={{ scale: scaleImage }}
+              className="absolute right-0 lg:right-0 top-1/2 -translate-y-1/2 w-full max-w-[450px] lg:max-w-[600px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-900/40"
+              initial={{ scale: 0.8, opacity: 0, rotate: 15, y: 100 }}
+              animate={{ scale: 1, opacity: 1, rotate: 5, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              style={{ 
+                scale: scaleImage,
+                rotate: rotateImage,
+                y: yImage,
+                opacity: opacityImage
+               }}
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/40 via-transparent to-transparent z-10 mix-blend-overlay"></div>
               <img 

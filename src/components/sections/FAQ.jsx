@@ -26,7 +26,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-24 bg-slate-50 relative">
+    <section id="faq" className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           

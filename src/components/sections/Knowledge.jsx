@@ -26,7 +26,7 @@ const articles = [
 
 export default function Knowledge() {
   return (
-    <section id="knowledge" className="py-24 bg-white relative">
+    <section id="knowledge" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="mb-16 md:flex justify-between items-end">
           <div className="max-w-xl">

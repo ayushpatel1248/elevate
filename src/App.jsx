@@ -14,7 +14,7 @@ import AdminPortal from './pages/AdminPortal';
 
 function App() {
   return (
-    <div className="font-inter text-slate-900 bg-slate-50 min-h-screen selection:bg-amber-500/30 selection:text-slate-900 flex flex-col">
+    <div className="font-inter text-slate-900 bg-slate-50 min-h-screen w-full max-w-[100vw] overflow-x-hidden selection:bg-amber-500/30 selection:text-slate-900 flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Routes>

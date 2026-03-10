@@ -15,12 +15,13 @@
   --color-surface-hover: #f1f5f9;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-body {
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom Gradients */
